@@ -1,0 +1,23 @@
+[project]
+name = "ensemble-classification"
+version = "0.1.0"
+description = "Rigorous tabular ensemble classification, evaluated to a clinical-research standard"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.1",
+    "pandas>=2.2",
+    "scikit-learn>=1.6",
+    "xgboost>=3.0",
+    "lightgbm>=4.5",
+    "catboost>=1.2.7",
+    "shap>=0.46",
+    "seaborn>=0.13",
+    "imbalanced-learn>=0.13",
+    # Modern numba floor: keeps uv on current prebuilt wheels instead of
+    # backtracking to the 2021-era numba 0.53 sdist (Python <=3.9 only) that
+    # shap would otherwise drag in. numba caps numpy, so this also settles numpy.
+    "numba>=0.61",
+    "matplotlib>=3.9",
+    "ipykernel>=6.29",
+    "jupyterlab>=4.2",
+]

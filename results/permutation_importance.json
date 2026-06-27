@@ -1,0 +1,52 @@
+[
+  {
+    "feature": "education_of_employee",
+    "importance_mean": 0.13478837518716688,
+    "importance_std": 0.0044411142980616295
+  },
+  {
+    "feature": "has_job_experience",
+    "importance_mean": 0.055584095022404564,
+    "importance_std": 0.004365564179357658
+  },
+  {
+    "feature": "continent",
+    "importance_mean": 0.032509751599425596,
+    "importance_std": 0.0027761002383797345
+  },
+  {
+    "feature": "region_of_employment",
+    "importance_mean": 0.02512135024710195,
+    "importance_std": 0.002545430459076342
+  },
+  {
+    "feature": "unit_of_wage",
+    "importance_mean": 0.017562363184183333,
+    "importance_std": 0.0030353124421304938
+  },
+  {
+    "feature": "full_time_position",
+    "importance_mean": 0.003137648518083347,
+    "importance_std": 0.0004571781326471783
+  },
+  {
+    "feature": "prevailing_wage",
+    "importance_mean": 0.0016970239781873425,
+    "importance_std": 0.0005162785225186717
+  },
+  {
+    "feature": "requires_job_training",
+    "importance_mean": 0.0015645487647685252,
+    "importance_std": 0.0005112599367405146
+  },
+  {
+    "feature": "company_age",
+    "importance_mean": -5.718744877966642e-06,
+    "importance_std": 0.000579602260986146
+  },
+  {
+    "feature": "no_of_employees",
+    "importance_mean": -0.0006741065475743407,
+    "importance_std": 0.0005822507777697934
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "logistic_regression": {
+    "clf__C": 0.1
+  },
+  "random_forest": {
+    "clf__max_depth": 10,
+    "clf__min_samples_leaf": 4
+  },
+  "xgboost": {
+    "clf__max_depth": 4
+  },
+  "lightgbm": {
+    "clf__num_leaves": 31
+  },
+  "catboost": {
+    "clf__depth": 4
+  }
+}
