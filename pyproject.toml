@@ -30,6 +30,13 @@ dependencies = [
 # beyond the advisory fix, so they are not pulled in here. Pillow 13 is a
 # separate major bump.
 constraint-dependencies = [
+    # Pillow 13.0.0 (2026-10-16). Major bump from 12.3.0. Python >=3.13 already
+    # meets the new >=3.11 floor. This repo never calls the removed APIs
+    # (I-mode PNG save, Image._show, Image.Image.get_child_images,
+    # ImageCms product_name/product_info, ExifTags.IFD.Makernote, or a
+    # fromarray mode that changes dtype). Matplotlib 3.11 requires pillow>=9
+    # and saves RGB/RGBA figures.
+    "pillow>=13.0.0,<14",
     "anyio>=4.14.2,<4.15",
     # 2026.10.18 removes the compromised emSign roots (GHSA-6q48-6c7w-9gw2).
     # 2026.10.19 restores the unaffected emSign roots. 2026.10.23 is the
