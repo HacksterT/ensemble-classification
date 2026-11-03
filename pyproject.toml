@@ -19,5 +19,25 @@ dependencies = [
     "numba>=0.61",
     "matplotlib>=3.9",
     "ipykernel>=6.29",
-    "jupyterlab>=4.2",
+    # 4.6.4 fixes the JupyterLab advisories open against 4.6.0; 4.6.5 is the
+    # current 4.6 patch and includes those fixes.
+    "jupyterlab>=4.6.4",
+]
+
+[tool.uv]
+# Transitive security floors. Upper bounds keep the lock on the releases
+# reviewed for this change. anyio 4.15+ and soupsieve 2.10/3/4 change behavior
+# beyond the advisory fix, so they are not pulled in here. Pillow 13 is a
+# separate major bump.
+constraint-dependencies = [
+    "anyio>=4.14.2,<4.15",
+    # 2026.10.18 removes the compromised emSign roots (GHSA-6q48-6c7w-9gw2).
+    # 2026.10.19 restores the unaffected emSign roots. 2026.10.23 is the
+    # current Mozilla bundle on top of that fix.
+    "certifi>=2026.10.23",
+    "mistune>=3.3.3,<3.4",
+    "nbconvert>=7.17.2,<7.18",
+    "soupsieve>=2.9,<2.10",
+    "tornado>=6.6,<6.7",
+    "urllib3>=2.8.0,<2.9",
 ]
